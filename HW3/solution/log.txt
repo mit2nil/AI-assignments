@@ -1,0 +1,344 @@
++++++++Constants (Sorted)+++++++++++++++++++
+Q(Alice) :hash: 1890264218
+D(John,Bob) :hash: -1926090511
+D(John,Alice) :hash: 156920508
+B(John,Alice) :hash: 549947518
+B(John,Bob) :hash: -1116743885
+R(Tom) :hash: 42238539
+++++Implications (Sorted)++++++++++
+B(x,y) ^ C(x,y) => A(x)
+D(x,y) ^ Q(y) => C(x,y)
+H(x) => F(x)
+F(x) => G(x)
+A(x) => H(x)
+D(x,y) => ~H(y)
+G(x) => H(x)
+R(x) => H(x)
++++++Hash indexed implications+++++++++
+-->A
+B(x,y) ^ C(x,y) => A(x)
+-->C
+D(x,y) ^ Q(y) => C(x,y)
+-->F
+H(x) => F(x)
+-->G
+F(x) => G(x)
+-->H
+A(x) => H(x)
+D(x,y) => ~H(y)
+G(x) => H(x)
+R(x) => H(x)
++++++Hash indexed constants+++++++++
+-->Q
+Q(Alice)
+-->B
+B(John,Alice)
+B(John,Bob)
+-->R
+R(Tom)
+-->D
+D(John,Alice)
+D(John,Bob)
++++++Resolving New Query+++++++++
+Solving query: F(Bob)
+LOOP1
+LOOP2
+Deriving slist for: H(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaOut
+Solving query: H(Bob)
+LOOP1
+LOOP2
+Deriving slist for: A(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: A(Bob)
+LOOP1
+LOOP2
+Deriving slist for: B(Bob,y)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: B(Bob,y)
+Fact not Found in KB
+LOOP1
+LOOP2
+Deriving slist for: G(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: G(Bob)
+LOOP1
+LOOP2
+Deriving slist for: F(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: F(Bob)
+Loop deteccted
+LOOP1
+LOOP2
+Deriving slist for: R(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: R(Bob)
+Fact not Found in KB
++++++Resolving New Query+++++++++
+Solving query: H(John)
+LOOP1
+LOOP2
+Deriving slist for: A(John)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaOut
+Solving query: A(John)
+LOOP1
+LOOP2
+Deriving slist for: B(John,y)
+Slist: 
+Slist[0]
+(y,Alice)
+Slist[1]
+(y,Bob)
+THETA 0
+ThetaIn
+ThetaOut
+LOOP3
+THETA 1
+ThetaIn
+ThetaOut
+(y,Alice)
+K :y V: Alice
+LOOP4
+LOOP5
+LOOP5
+Solving query: B(John,Alice)
+Found in KB
+THETA 2
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+LOOP4
+LOOP5
+LOOP5
+Solving query: C(John,Alice)
+LOOP1
+LOOP2
+Deriving slist for: D(John,Alice)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+Solving query: D(John,Alice)
+Found in KB
+THETA 4
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+LOOP2
+Deriving slist for: Q(Alice)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+Solving query: Q(Alice)
+Found in KB
+THETA 4
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+THETA 2
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
+THETA 4
+ThetaIn
+(y,Alice)
+ThetaOut
+(y,Alice)
++++++Resolving New Query+++++++++
+Solving query: ~H(Alice)
+LOOP1
+LOOP2
+Deriving slist for: D(x,Alice)
+Slist: 
+Slist[0]
+(x,John)
+THETA 0
+ThetaOut
+LOOP3
+THETA 1
+ThetaOut
+(x,John)
+K :x V: John
+LOOP4
+LOOP5
+LOOP5
+Solving query: D(John,Alice)
+Found in KB
+THETA 2
+ThetaIn
+(x,John)
+ThetaOut
+(x,John)
++++++Resolving New Query+++++++++
+Solving query: ~H(John)
+LOOP1
+LOOP2
+Deriving slist for: D(x,John)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaOut
+Solving query: D(x,John)
+Fact not Found in KB
++++++Resolving New Query+++++++++
+Solving query: G(Bob)
+LOOP1
+LOOP2
+Deriving slist for: F(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaOut
+Solving query: F(Bob)
+LOOP1
+LOOP2
+Deriving slist for: H(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: H(Bob)
+LOOP1
+LOOP2
+Deriving slist for: A(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: A(Bob)
+LOOP1
+LOOP2
+Deriving slist for: B(Bob,y)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: B(Bob,y)
+Fact not Found in KB
+LOOP1
+LOOP2
+Deriving slist for: G(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: G(Bob)
+Loop deteccted
+LOOP1
+LOOP2
+Deriving slist for: R(Bob)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: R(Bob)
+Fact not Found in KB
++++++Resolving New Query+++++++++
+Solving query: G(Tom)
+LOOP1
+LOOP2
+Deriving slist for: F(Tom)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaOut
+Solving query: F(Tom)
+LOOP1
+LOOP2
+Deriving slist for: H(Tom)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: H(Tom)
+LOOP1
+LOOP2
+Deriving slist for: A(Tom)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: A(Tom)
+LOOP1
+LOOP2
+Deriving slist for: B(Tom,y)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: B(Tom,y)
+Fact not Found in KB
+LOOP1
+LOOP2
+Deriving slist for: G(Tom)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: G(Tom)
+Loop deteccted
+LOOP1
+LOOP2
+Deriving slist for: R(Tom)
+Slist: Empty
+LOOP6
+THETA 3
+ThetaIn
+ThetaOut
+Solving query: R(Tom)
+Found in KB
+THETA 4
+ThetaIn
+ThetaOut
+THETA 4
+ThetaIn
+ThetaOut
+THETA 4
+ThetaIn
+ThetaOut
